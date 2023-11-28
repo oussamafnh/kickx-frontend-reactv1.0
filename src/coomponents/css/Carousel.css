@@ -1,0 +1,246 @@
+/* .carouselrelative{
+    position: relative;
+} */
+.carousel {
+    /* position: absolute; */
+    width: 98vw;
+    height: 100vh;
+    position: sticky;
+    position: -webkit-sticky;
+    /* position: static; */
+    /* margin-bottom: 9vh; */
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+.svgs {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.svg-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.Carouselcard {
+    width: 100%;
+    height: 93%;
+    /* margin-top: 2vh; */
+    background-size: cover;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.Carouselcard.active {
+    opacity: 1;
+}
+
+.carouselcardimg {
+    width: 41vw;
+    position: absolute;
+    rotate: -30deg;
+    transform: translateY(-10%);
+}
+
+.sneaker-title {
+    font-size: 3em;
+    color: #000000;
+    position: absolute;
+    top: 0%;
+    height: auto;
+    width: auto;
+    text-align: center;
+}
+
+.sneaker-infos {
+    width: 81vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 10%;
+    color: #000000;
+    bottom: 0%;
+    position: absolute;
+    column-gap: 50vw;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: 0;
+}
+
+.x-price {
+    flex: 0 0 auto;
+    position: absolute;
+    font-weight: bold;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+
+.genderxbrand {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    text-align: right;
+    flex: 0 0 auto;
+    position: absolute;
+    /* margin-right: -20vw; */
+    /* float: right; */
+    /* width: 8vw; */
+    left: 0vw;
+}
+
+.x-btn {
+    cursor: pointer;
+    /* width: auto; */
+    transition: all .2s;
+    padding: 10px 20px;
+    border-radius: 100px;
+    background: #cfef00;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.a-btn {
+    text-decoration: none;
+    flex: 0 0 auto;
+    position: absolute;
+    /* margin-right: -20vw; */
+    /* float: right; */
+    /* width: 8vw; */
+    right: 0vw;
+}
+
+.x-btn span {
+    font-size: 2.5vh;
+    /* font-weight: bold; */
+    font-family: 'Jockey One', sans-serif;
+
+}
+
+.x-btn:hover {
+    background: #c4e201;
+}
+
+.x-btn>svg {
+    width: 34px;
+    margin-left: 10px;
+    transition: transform .3s ease-in-out;
+}
+
+.x-btn:hover svg {
+    transform: translateX(5px);
+}
+
+.x-btn:active {
+    transform: scale(0.95);
+}
+
+
+
+
+
+.scribbbles {
+    position: absolute;
+}
+
+.scribbbles svg:nth-child(1) {
+    transform: translate(-20vw, -20vh);
+}
+
+.scribbbles svg:nth-child(2) {
+    transform: translate(-20vw, 20vh);
+    /* transform: rotate(-180deg); */
+}
+
+.scribbbles svg:nth-child(3) {
+    transform: translate(15vw, 20vh);
+}
+
+.scribbbles svg:nth-child(4) {
+    transform: translate(15vw, -20vh);
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .carousel {
+        height: 100vh;
+    }
+
+    .svgs {
+        top: 70%;
+        transform: translateY(-30%);
+    }
+
+    .carouselcardimg {
+        width: 100%;
+        margin-top: 5%;
+        rotate: 0deg;
+    }
+
+    .sneaker-title {
+        font-size: 2em;
+        top: 2%;
+    }
+
+    .sneaker-infos {
+        /* margin-right: 10vw; */
+        column-gap: 50vw;
+        bottom: 2vh;
+    }
+
+    .a-btn {
+        position: relative;
+    }
+
+    .genderxbrand {
+        position: relative;
+    }
+
+    .x-price {
+        position: relative;
+    }
+
+    .x-btn {
+        padding: 8px 23vw;
+        font-size: 14px;
+    }
+
+    .x-btn>svg {
+        width: 20px;
+    }
+
+    .x-btn span {
+        width: 28vw;
+    }
+
+
+    .scribbbles {
+        display: none;
+    }
+}

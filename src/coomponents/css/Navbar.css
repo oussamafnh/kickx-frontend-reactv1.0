@@ -20,8 +20,12 @@
 /* Logo styles */
 .logo {
     position: absolute;
+    /* position: fixed; */
     display: flex;
-    margin: 45%;
+    align-items: center;
+    justify-content: center;    /* margin: 45%; */
+    left: 50%;
+    right: 50%;
 }
 
 .logo svg {
@@ -48,13 +52,14 @@
     font-size: 3vh;
 }
 
-.links a :hover{
+.links a :hover {
     color: #016340;
     transition: 0.5s;
 }
 
 /* Authentication buttons styles */
 .auth-buttons {
+    /* position: fixed; */
     margin-left: auto;
     margin-top: -0.5vh;
 }
@@ -122,7 +127,7 @@
 
 .burger input:checked~span:nth-of-type(1) {
     transform: rotate(45deg);
-    top: -1.5px;
+    /* top: -1.5px; */
 }
 
 .burger input:checked~span:nth-of-type(2) {
@@ -132,7 +137,7 @@
 
 .burger input:checked~span:nth-of-type(3) {
     transform: rotate(-45deg);
-    top: 15.5px;
+    /* top: 15.5px; */
 }
 
 /* Mobile menu styles */
@@ -146,7 +151,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; /* Center the items vertically */
+    align-items: center;
+    /* Center the items vertically */
     z-index: 1000;
     border-radius: 10px;
     overflow-y: auto;
@@ -179,7 +185,8 @@
     .logo {
         position: absolute;
         display: flex;
-        margin: 35%;
+        left: 50%;
+        right: 50%;
     }
 
     .logo svg {
@@ -204,4 +211,60 @@
     .mobile-menu {
         display: none;
     }
+}
+
+.user-dropdown {
+    /* top: 0; */
+    margin-top: -3.5vh;
+    right: 3vh;
+    position: fixed;
+    display: flex;
+    /* align-items: center; */
+    cursor: pointer;
+}
+
+.user-dropdown img {
+    width: 7vh;
+    height: 7vh;
+    border-radius: 50%;
+    margin-right: 0.5vh;
+}
+
+.user-dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #FFFFFF;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 3vh;
+    z-index: 1;
+}
+
+.user-dropdown:hover .user-dropdown-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-dropdown-content p {
+    margin: 0;
+    font-size: 2vh;
+    text-align: center;
+    margin-bottom: 1vh;
+}
+
+.user-dropdown-content button {
+    background: none;
+    border: none;
+    padding: 0.5vh 1vh;
+    border-radius: 10px;
+    font-size: 2vh;
+    cursor: pointer;
+    color: #003522;
+}
+
+.user-dropdown-content button:hover {
+    color: #016340;
+    transition: 0.5s;
 }
