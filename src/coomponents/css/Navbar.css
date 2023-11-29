@@ -154,7 +154,7 @@
     align-items: center;
     /* Center the items vertically */
     z-index: 1000;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     overflow-y: auto;
 }
 

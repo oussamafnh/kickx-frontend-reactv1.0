@@ -3,7 +3,7 @@
 } */
 .carousel {
     /* position: absolute; */
-    width: 98vw;
+    width: 100vw;
     height: 100vh;
     position: sticky;
     position: -webkit-sticky;
