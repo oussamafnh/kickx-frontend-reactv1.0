@@ -6,16 +6,14 @@ const Section3 = () => {
     const [sneakers, setSneakers] = useState([]);
 
     useEffect(() => {
-        // Fetch data from your endpoint
+        
         const fetchData = async () => {
             try {
                 const response = await fetch("http://127.0.0.1:8000/api/sneakers");
                 const data = await response.json();
 
-                // Sort the sneakers by release year in descending order
                 const sortedSneakers = data.data.sort((a, b) => b.release_year - a.release_year);
 
-                // Get the newest 3 sneakers
                 const newestSneakers = sortedSneakers.slice(0, 3);
 
                 setSneakers(newestSneakers);
