@@ -111,7 +111,7 @@ const Navbar = () => {
 
   const fetchUserProfile = async () => {
     try {
-      const response = await axios.get('http://127.0.0.1:8000/api/user/profile', {
+      const response = await axios.get('http://192.168.1.6:8000/api/user/profile', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('authToken')}`,
         },
