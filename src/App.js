@@ -7,14 +7,8 @@ import Routerx from "./router";
 function App() {
   return (
     <div className="App">
-<<<<<<< HEAD
       <Navbar />
       <Routerx />
-=======
-      <Nav />
-      <Home />
-      <div className="ccc"></div>
->>>>>>> origin/main
     </div>
   );
 }
