@@ -1,0 +1,91 @@
+.section4{
+    height: 93vh;
+}
+
+.section4 h1{
+    margin-left: 20px;
+}
+
+.sec4-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  
+  .left-side-sec4 {
+    flex: 1;
+    height: 90%;
+    margin-right: 20px;
+  }
+  
+  .left-side-sec4 img {
+    width: 100%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .right-side-sec4 {
+    flex: 2;
+    max-width: 600px;
+  }
+  
+  .store-info {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 2vh;
+    /* padding-top: 0; */
+    /* padding-left: 15px; */
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .store-info:hover {
+    transform: scale(1.05);
+  }
+  
+  .store-info h2 {
+    margin-bottom: 10px;
+    color: #333;
+  }
+  .country-city{
+    display: flex;
+    flex-direction: row;
+    column-gap: 5vw;
+  }
+  .country-city p {
+    margin: 0;
+    color: #555;
+  }
+  .secondary-infos p{
+    color: #555;
+  }
+  .additional-info {
+    margin-top: 10px;
+  }
+  
+  /* Make additional info visible for the active store */
+  .store-info.active .additional-info {
+    display: block;
+  }
+  
+  /* Initially hide additional info for all stores */
+  .additional-info {
+    display: none;
+  }
+  
+  /* Responsive styles for mobile */
+  @media (max-width: 768px) {
+    .section4 {
+      flex-direction: column;
+    }
+  
+    .left-side-sec4,
+    .right-side-sec4 {
+      max-width: 100%;
+      margin-right: 0;
+    }
+  }
+  
