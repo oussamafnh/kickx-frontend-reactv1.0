@@ -84,7 +84,11 @@ const Section3 = () => {
 
         const fetchData = async () => {
             try {
+<<<<<<< HEAD
                 const response = await fetch("http://192.168.1.7:8000/api/sneakers");
+=======
+                const response = await fetch("http://192.168.1.6:8000/api/sneakers");
+>>>>>>> origin/main
                 const data = await response.json();
 
                 const sortedSneakers = data.data.sort((a, b) => b.release_year - a.release_year);

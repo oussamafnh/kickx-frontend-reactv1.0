@@ -1,6 +1,3 @@
-/* Navbar.css */
-
-/* General styles for the navbar */
 .navbar {
     display: flex;
     align-items: center;
@@ -17,13 +14,12 @@
     overflow: auto;
 }
 
-/* Logo styles */
+
 .logo {
     position: absolute;
-    /* position: fixed; */
     display: flex;
     align-items: center;
-    justify-content: center;    /* margin: 45%; */
+    justify-content: center;
     left: 50%;
     right: 50%;
 }
@@ -57,9 +53,8 @@
     transition: 0.5s;
 }
 
-/* Authentication buttons styles */
+
 .auth-buttons {
-    /* position: fixed; */
     margin-left: auto;
     margin-top: -0.5vh;
 }

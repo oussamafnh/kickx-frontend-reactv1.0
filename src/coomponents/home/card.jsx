@@ -4,7 +4,6 @@ const Card = ({ sneaker }) => {
     const [liked, setLiked] = useState(false);
 
     const handleLikeClick = () => {
-        // Toggle the liked state
         setLiked(!liked);
     };
 

@@ -112,6 +112,7 @@ const Section4 = () => {
         // Clear the interval on component unmount
         return () => clearInterval(interval);
     }, [stores.length]);
+    //ousama
 
     return (
         <div className="section4">
