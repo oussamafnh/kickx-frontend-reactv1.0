@@ -1,4 +1,3 @@
-// src/components/AuthForm.js
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
@@ -8,7 +7,7 @@ import {
     loginFailure,
     registerFailure,
 } from '../store/actions/auth';
-import './css/Authform.css'; // Add your CSS file for styling
+import './css/Authform.css';
 
 const AuthForm = () => {
     const [email, setEmail] = useState('');
@@ -33,11 +32,8 @@ const AuthForm = () => {
             if (response.data.message === 'User registered successfully') {
                 setIsLoginForm(true);
                 dispatch(registerSuccess(response.data));
-
-                // Store the token in local storage
                 localStorage.setItem('authToken', response.data.token);
             } else if (response.data.token) {
-                // Assuming that the token is returned in the response
                 localStorage.setItem('authToken', response.data.token);
 
                 setIsLoginForm(true);
@@ -56,12 +52,9 @@ const AuthForm = () => {
             }
         }
     };
-
-    // Add this useEffect to check for a stored token on component mount
     useEffect(() => {
         const storedToken = localStorage.getItem('authToken');
         if (storedToken) {
-            // Dispatch an action indicating the user is logged in
             dispatch(loginSuccess({ message: 'User logged in successfully' }));
             setIsLoginForm(true);
         }
