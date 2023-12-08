@@ -21,11 +21,7 @@ const Navbar = () => {
 
   const fetchUserProfile = async () => {
     try {
-<<<<<<< HEAD
       const response = await axios.get('http://192.168.1.7:8000/api/user/profile', {
-=======
-      const response = await axios.get('http://192.168.1.6:8000/api/user/profile', {
->>>>>>> origin/main
         headers: {
           Authorization: `Bearer ${localStorage.getItem('authToken')}`,
         },
@@ -73,8 +69,9 @@ const Navbar = () => {
     <div className="navbar">
       <div className="links">
         <Link to="/">Home</Link>
-        <Link to="#">About</Link>
-        <Link to="#">Contact</Link>
+        <Link to="#">Trending</Link>
+        <Link to="#">Sneakers</Link>
+        <Link to="#">blog</Link>
       </div>
 
       <label className="burger">
@@ -124,10 +121,13 @@ const Navbar = () => {
               Home
             </motion.a>
             <motion.a href="#" {...animateLink(0.4)}>
-              About
+              Trending
             </motion.a>
             <motion.a href="#" {...animateLink(0.6)}>
-              Contact
+              Sneakers
+            </motion.a>
+            <motion.a href="#" {...animateLink(0.8)}>
+              Blog
             </motion.a>
           </motion.div>
         )}

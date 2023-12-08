@@ -23,9 +23,10 @@
   .left-side-sec4 img {
     width: 100%;
     max-height: 90%;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
+    /* border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    transition: opacity 5s ease-in-out;
+}
   
   .right-side-sec4 {
     flex: 2;
@@ -34,17 +35,12 @@
   
   .store-info {
     border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 2vh;
-    /* padding-top: 0; */
-    /* padding-left: 15px; */
+    /* border-radius: 8px; */
+    padding: 1.5vh;
     margin-bottom: 20px;
     transition: transform 0.3s ease-in-out;
   }
-  
-  .store-info:hover {
-    transform: scale(1.05);
-  }
+
   
   .store-info h2 {
     margin-bottom: 10px;
@@ -65,18 +61,21 @@
   .additional-info {
     margin-top: 10px;
   }
-  
-  /* Make additional info visible for the active store */
+  .store-info{
+    opacity: 60%;
+  }
+
+  .store-info.active{
+    opacity: 1;
+  }
   .store-info.active .additional-info {
     display: block;
   }
   
-  /* Initially hide additional info for all stores */
   .additional-info {
     display: none;
   }
-  
-  /* Responsive styles for mobile */
+
   @media (max-width: 768px) {
     .section4 {
       flex-direction: column;
@@ -88,4 +87,18 @@
       margin-right: 0;
     }
   }
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   

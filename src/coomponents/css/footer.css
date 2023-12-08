@@ -1,0 +1,154 @@
+.footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    height: 93vh;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2vw;
+}
+
+.footer-section {
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+.footer-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5vh;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.3s ease-in;
+}
+
+.social-icons a:nth-child(1):hover {
+    color: rgb(0, 68, 255);
+}
+
+.social-icons a:nth-child(2):hover {
+    color: rgb(116, 146, 228);
+}
+
+.social-icons a:nth-child(3):hover {
+    color: rgb(255, 0, 0);
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.linksfooter{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    /* font-weight: bold; */
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 26vh;
+    text-align: center;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2vh;
+    /* padding-right: 2vh; */
+    /* justify-content: space-between; */
+    /* height: 100%; */
+}
+
+
+.footer-bottom p :nth-child(1) {
+    font-size: 1rem;
+    /* position: absolute; */
+    left: 2vw;
+    margin-left: 2vw;
+}
+
+.footer-made-by {
+    font-size: 1rem;
+    margin-left: 45%;
+    margin-right: 41%;
+    position: absolute;
+}
+
+.back-to-top {
+    position: absolute;
+    right: 2vw;
+}
+
+.back-to-top a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.back-to-top a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 768px) {
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-section h2 {
+        margin-bottom: 2vh;
+    }
+    .social-icons {
+        flex-direction: row;
+        gap: 30px;
+    }
+    .linksfooter{
+        flex-direction: row;
+        gap: 30px;
+    }
+    .footer-bottom {
+        margin-top: 2vh;
+        text-align: center;
+        padding-top: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 2vh;
+        display: grid;
+    }
+
+    .footer-made-by {
+        margin-top: 10vh;
+        margin-left: 0;
+        margin-right: 0;
+        position: absolute;
+    }
+    
+    .back-to-top {
+        margin-top: 8vh;
+        position: absolute;
+    }
+
+}
