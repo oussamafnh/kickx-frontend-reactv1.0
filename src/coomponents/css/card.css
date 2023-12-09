@@ -1,0 +1,109 @@
+/* Sneaker Card Container */
+.sneaker-card {
+    position: relative;
+    width: 20vw;
+    /* margin: 20px; */
+    padding: 20px;
+    background-color: #fff;
+    /* border-radius: 10px; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.sneaker-card:hover {
+    transform: scale(1.01);
+    background-color: #7e7e7e16;
+}
+
+/* Sneaker Image */
+.sneaker-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Sneaker Info */
+.sneaker-info {
+    text-align: center;
+}
+
+/* Sneaker Title */
+.sneaker-info h2 {
+    font-size: 1.5rem;
+    margin-top: -2vh;
+    margin-bottom: 1vh;
+    color: #333;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    line-height: 1.2em;
+    /* Adjust the line height as needed */
+    max-height: 2.4em;
+    /* Adjust the max height to control the number of lines */
+}
+
+/* Price and Gender */
+.price-and-gender {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Gender Text */
+.gender-sneaker-card {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Price Text */
+.price-sneaker-card {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #e44d26;
+    /* Orange color */
+}
+
+/* Like Button */
+.like-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #777;
+    transition: color 0.3s ease-in-out;
+}
+
+.like-button svg g:hover {
+    fill: red;
+    transition: 0.3s ease-in;
+}
+
+
+
+
+@media (max-width: 700px) {
+    .sneaker-card {
+        margin-top: 20px;
+        position: relative;
+        width: 36vw;
+        padding: 10px;
+    }
+
+
+    .sneaker-info h2 {
+        font-size: 1rem;
+    }
+    .gender-sneaker-card {
+        font-size: 0.7rem;
+    }
+    
+    /* Price Text */
+    .price-sneaker-card {
+        font-size: 0.7rem;
+    }
+    
+}
