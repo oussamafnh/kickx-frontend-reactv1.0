@@ -51,15 +51,10 @@ const Section4 = () => {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            // Change the selected store every 2 seconds
             setSelectedStoreIndex((prevIndex) => (prevIndex + 1) % stores.length);
         }, 5000);
-
-        // Clear the interval on component unmount
         return () => clearInterval(interval);
     }, [stores.length]);
-    //ousama
-
     return (
         <motion.div
             className="section4"
