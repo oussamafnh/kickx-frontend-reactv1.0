@@ -1,3 +1,5 @@
+//footer.jsx
+
 import React, { useEffect, useState, useRef } from "react";
 import { motion, useInView, useAnimation, } from "framer-motion";
 import { useSelector } from 'react-redux';
