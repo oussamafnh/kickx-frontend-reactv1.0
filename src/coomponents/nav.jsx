@@ -5,7 +5,7 @@ import { logout } from '../store/reducers/auth';
 import axios from 'axios';
 import './css/Navbar.css';
 import { user } from '@nextui-org/react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 
 const Navbar = () => {
@@ -21,7 +21,7 @@ const Navbar = () => {
 
   const fetchUserProfile = async () => {
     try {
-      const response = await axios.get('http://192.168.1.7:8000/api/user/profile', {
+      const response = await axios.get('http://127.0.0.1:8000/api/user/profile', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('authToken')}`,
         },
@@ -65,12 +65,16 @@ const Navbar = () => {
     };
   };
 
+  // const location = useLocation();
+  // const isTransparentBackground = location.pathname.startsWith('/sneaker/');
+
   return (
-    <div className="navbar">
+    // <div className={`navbar ${isTransparentBackground ? 'transparent-bg' : ''}`}>
+    <div className={`navbar`}>
       <div className="links">
         <Link to="/">Home</Link>
         <Link to="#">Trending</Link>
-        <Link to="#">Sneakers</Link>
+        <Link to="/sneakers">Sneakers</Link>
         <Link to="#">blog</Link>
       </div>
 
@@ -123,7 +127,7 @@ const Navbar = () => {
             <motion.a href="#" {...animateLink(0.4)}>
               Trending
             </motion.a>
-            <motion.a href="#" {...animateLink(0.6)}>
+            <motion.a href="/sneakers" {...animateLink(0.6)}>
               Sneakers
             </motion.a>
             <motion.a href="#" {...animateLink(0.8)}>

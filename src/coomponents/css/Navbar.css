@@ -13,7 +13,9 @@
     z-index: 1001;
     overflow: auto;
 }
-
+/* .transparent-bg{
+    background-color: transparent;
+} */
 
 .logo {
     position: absolute;

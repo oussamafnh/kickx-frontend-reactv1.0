@@ -9,7 +9,7 @@
 
 //         const fetchData = async () => {
 //             try {
-//                 const response = await fetch("http://192.168.1.7:8000/api/sneakers");
+//                 const response = await fetch("hhttp://127.0.0.1:8000/api/sneakers");
 //                 const data = await response.json();
 
 //                 const sortedSneakers = data.data.sort((a, b) => b.release_year - a.release_year);
@@ -55,6 +55,8 @@ import React, { useEffect, useState, useRef } from "react";
 import { motion, useInView, useAnimation, useScroll, useTransform } from "framer-motion";
 import Card from './card'
 import "../css/home-sec3.css";
+import { Link } from 'react-router-dom';
+
 
 const Section3 = () => {
     const [sneakers, setSneakers] = useState([]);
@@ -84,7 +86,7 @@ const Section3 = () => {
 
         const fetchData = async () => {
             try {
-                const response = await fetch("http://192.168.1.7:8000/api/sneakers");
+                const response = await fetch("http://127.0.0.1:8000/api/sneakers");
 
                 const data = await response.json();
 
@@ -120,7 +122,9 @@ const Section3 = () => {
                         animate={cardanimation}
                         transition={{ duration: 0.5, delay: 0.6 }}
                     >
-                        <Card key={sneaker.id} sneaker={sneaker} />
+                        
+                            <Card key={sneaker.id} sneaker={sneaker} />
+
                     </motion.div>
                 ))}
                 {ready && (<motion.div

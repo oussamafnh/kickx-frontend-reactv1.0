@@ -56,6 +56,7 @@
 .linksfooter{
     display: flex;
     flex-direction: column;
+    margin-top: -10px;
     gap: 20px;
 }
 
@@ -103,8 +104,12 @@
     right: 2vw;
 }
 
-.back-to-top a {
+.back-to-top button {
+    background-color: transparent;
+    border: none;
+    font-family: 'Jockey One', sans-serif;
     color: #fff;
+    cursor: pointer;
     text-decoration: none;
     font-size: 1rem;
 }

@@ -1,0 +1,135 @@
+/* Sneaker Card Container */
+.sneaker-card-loading {
+    position: relative;
+    width: 20vw;
+    height: 400px;
+    /* margin: 20px; */
+    padding: 20px;
+    /* background-color: #0000005b; */
+    /* border-radius: 10px; */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    border: 1px solid #0000005b;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    animation: 1s infinite alternate Fade;
+
+}
+
+
+@keyframes Fade {
+    from {
+        opacity: 0.2;
+    }
+  
+    to {
+        opacity: 1;
+    }
+  }
+/* Sneaker Image */
+.sneaker-card-loading .sneakercardloadingimg {
+    width: 100%;
+    height: 200px;
+    margin-top: 5vh;
+    border-radius: 5px;
+    background-color: #0000005b;
+}
+
+
+/* Sneaker Title */
+.sneaker-info-loading .titleloadingcard {
+    width: 100%;
+    height: 25px;
+    border-radius: 5px;
+    margin-top: 2.5vh;
+    margin-bottom: 1vh;
+    background-color: #0000005b;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    line-height: 1.2em;
+    /* Adjust the line height as needed */
+    max-height: 2.4em;
+    /* Adjust the max height to control the number of lines */
+}
+.sneaker-info-loading .titleloadingcard2 {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 0.2vh;
+}
+
+/* Price and Gender */
+.price-and-gender-loading {
+    position: absolute;
+    bottom: 2.8vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Gender Text */
+.loadingcardgender {
+    width: 20%;
+    height: 25px;
+    background-color: #0000005b;
+    border-radius: 5px;
+
+}
+
+/* Price Text */
+.loadingcardprice {
+    width: 20%;
+    height: 25px;
+    background-color: #0000005b;
+    position: absolute;
+    right: 12%;
+    border-radius: 5px;
+
+    /* Orange color */
+}
+
+/* Like Button */
+.like-button-loading {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #7e7e7e5b;
+    transition: color 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+.like-button-loading svg  g{
+    fill: #0000005b;
+    stroke: #0000005b;
+}
+
+
+
+
+
+@media (max-width: 700px) {
+    .sneaker-card-loading {
+        margin-top: 20px;
+        position: relative;
+        width: 36vw;
+        padding: 10px;
+    }
+
+
+    .sneaker-info-loading .titleloadingcard {
+        font-size: 1rem;
+    }
+    .gender-sneaker-card-loading {
+        font-size: 0.7rem;
+    }
+    
+    /* Price Text */
+    .price-sneaker-card-loading {
+        font-size: 0.7rem;
+    }
+    
+}

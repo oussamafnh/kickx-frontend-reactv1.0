@@ -1,23 +1,18 @@
-import React, { useEffect, useState, useRef } from "react";
-import { motion, useInView, useAnimation, } from "framer-motion";
+import React, { useEffect, useRef } from "react";
+import { motion, useInView, useAnimation } from "framer-motion";
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import '../css/footer.css';
 
 const Footer = () => {
     const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
-
-
     const ref = useRef(null);
     const Inview = useInView(ref);
-
-    const footeranimation = useAnimation();
-
-
+    const footerAnimation = useAnimation();
 
     useEffect(() => {
         if (Inview) {
-            footeranimation.start("visible");
+            footerAnimation.start("visible");
         }
     }, [Inview]);
 
@@ -28,20 +23,28 @@ const Footer = () => {
                 visible: { opacity: 1, y: 0 },
             },
             initial: "hidden",
-            animate: footeranimation,
+            animate: footerAnimation,
             transition: { delay },
         };
     };
+
+    const handleScrollTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    };
+
     return (
         <motion.footer
             className="footer"
             ref={ref}
             variants={{
-                hidden: { opacity: 0, },
-                visible: { opacity: 1, },
+                hidden: { opacity: 0 },
+                visible: { opacity: 1 },
             }}
             initial="hidden"
-            animate={footeranimation}
+            animate={footerAnimation}
             transition={{ duration: 0.5, ease: 'easeInOut' }}
         >
             <div className="footer-content">
@@ -85,14 +88,14 @@ const Footer = () => {
                     </div>
                 </motion.div>
             </div>
-            <motion.div  {...animateLink(1.4)} className="footer-bottom">
+            <motion.div {...animateLink(1.4)} className="footer-bottom">
                 <p>&copy; 2023 Kickx. All rights reserved.</p>
                 <p className="footer-made-by">Made by Oussama Fannah</p>
                 <div className="back-to-top">
-                    <a href="#top">Back to Top</a>
+                    <button onClick={handleScrollTop}>Back to Top</button>
                 </div>
             </motion.div>
-        </motion.footer>
+        </motion.footer >
     );
 };
 

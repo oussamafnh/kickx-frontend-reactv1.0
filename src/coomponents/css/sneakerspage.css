@@ -1,0 +1,406 @@
+.sneakerspage {
+    width: 100%;
+    height: auto;
+    margin-top: 7vh;
+    overflow: hidden;
+}
+
+.searchsneakerbar {
+    width: 76.3%;
+    padding-left: 2%;
+    padding-right: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 5.6vh;
+    background-color: #fff;
+    z-index: 1000;
+}
+
+.searchsneakerbar p {
+    font-size: 4vh;
+}
+
+
+
+.togglefilter {
+    display: none;
+}
+
+.inputsearchsneaker {
+    margin-top: 2.7vh;
+    width: 20vw;
+    background-color: #f5f5f5;
+    color: #242424;
+    padding: .15rem .5rem;
+    height: 7vh;
+    outline: none;
+    border: none;
+    line-height: 1.15;
+    border: 1px solid #000000;
+}
+
+.inputsearchsneaker::placeholder {
+    font-size: 2vh;
+    font-family: 'Jockey One', sans-serif;
+}
+
+.inputsearchsneaker:focus {
+    border-bottom: 2px solid #cfef00;
+}
+
+
+
+
+
+
+.mainsneakerspage {
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+.filterbar {
+    position: fixed;
+    width: 20%;
+    height: 100vh;
+    padding: 2vh;
+    margin-top: -3vh;
+    box-sizing: border-box;
+    z-index: 1000;
+    background-color: rgba(181, 181, 181, 0.127);
+}
+
+.filterbar .title {
+    font-size: 4vh;
+    /* text-align: center; */
+    padding-bottom: 2vh;
+}
+
+.filterbar p {
+    margin-top: 4vh;
+    font-size: 2.5vh;
+}
+
+.sneakerscards {
+    margin-left: 20%;
+    margin-top: 0vh;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.sneakerscards .sneakers {
+    margin-top: 11vh;
+    /* background-color: #f7f7f7; */
+    /* justify-content: center; */
+    padding: 1.5%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3vw;
+    row-gap: 4vh;
+    align-content: stretch;
+}
+
+
+
+.sneakerscards .sneakers .sneaker-card {
+    border: 1px solid #000000;
+}
+
+
+/* .filterbrand .brands {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+} */
+.brands-table {
+    width: 100%;
+    /* margin-bottom: -2vh; */
+}
+
+
+
+.filtergender .genders {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.filterprice .price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filterprice .price input {
+    width: 70%;
+}
+
+.filteryear input {
+    width: 97%;
+    height: 6vh;
+}
+
+::placeholder {
+    font-size: 2vh;
+    font-family: 'Jockey One', sans-serif;
+}
+
+.filterbar .btns {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.filterbar .btns .Btn {
+    margin-top: 5vh;
+    width: 49%;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(15, 15, 15);
+    border: none;
+    color: white;
+    font-weight: 600;
+    gap: 8px;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+}
+
+.filterbar .btns .Btn::before {
+    width: 49%;
+    height: 6vh;
+    position: absolute;
+    content: "";
+    background-color: white;
+    border-radius: 50%;
+    left: -100%;
+    top: 0;
+    transition-duration: .3s;
+    mix-blend-mode: difference;
+}
+
+.filterbar .btns .Btn:hover::before {
+    transition-duration: .3s;
+    transform: translate(100%, -50%);
+    border-radius: 0;
+}
+
+.filterbar .btns .Btn:active {
+    transform: translate(0px, 5px);
+    transition-duration: .3s;
+}
+
+.cbx {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    font-size: 1.5vh;
+}
+
+/* .rdi {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    font-size: 2.4vh;
+
+}
+
+.rdi .container-filter {
+    border-radius: 50%;
+}
+
+.rdi .checkmark:after {
+    border-radius: 50%;
+} */
+
+
+.container-filter input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.container-filter {
+    position: relative;
+    cursor: pointer;
+    font-size: 6vh;
+    width: 1.5vh;
+    height: 1.5vh;
+    /* border-radius: 0%; */
+    user-select: none;
+    border: 0.4vh solid rgb(0, 0, 0);
+    display: block;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.checkmark:after {
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 100%;
+    /* border-radius: 50%; */
+    transform: scale(0);
+    transition: 100ms ease;
+}
+
+.container-filter input:checked~.checkmark:after {
+    transform: scale(1);
+}
+
+
+
+
+
+.pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination span {
+    cursor: pointer;
+    padding: 8px;
+    margin: 0 5px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.pagination span.active {
+    font-weight: bold;
+}
+
+.pagination span:hover {
+    opacity: 0.7;
+}
+
+.pagination span.inactive {
+    opacity: 0.5;
+}
+
+
+
+@media (min-width: 1366px) {
+    .cbx {
+        font-size: 2vh;
+    }
+}
+
+
+
+@media (max-width: 700px) {
+    .searchsneakerbar {
+        width: 90%;
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+
+    .searchsneakerbar p {
+        display: none;
+    }
+
+
+
+    .togglefilter {
+        display: block;
+        width: 45%;
+        height: 6vh;
+        margin-top: 2.7vh;
+        margin-bottom: 2.7vh;
+        border: 1px solid #000000;
+        font-family: 'Jockey One', sans-serif;
+        text-align: left;
+    }
+
+
+    .inputsearchsneaker {
+        margin-top: 2.7vh;
+        margin-bottom: 2.7vh;
+        height: 6vh;
+        width: 45%;
+    }
+
+    .filterbar {
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(255, 255, 255);
+    }
+
+    .sneakerscards {
+        width: 100%;
+        margin-left: 0%;
+    }
+
+
+    .sneakerscards .sneakers {
+        margin-top: 10vh;
+        /* background-color: #f7f7f7; */
+        justify-content: center;
+        padding: 1.5%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3vw;
+        row-gap: 4vh;
+        align-content: stretch;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    .pagination {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0px;
+    }
+
+    .pagination span {
+        cursor: pointer;
+        padding: 2px;
+        margin: 0 5px;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    .pagination span.active {
+        font-weight: bold;
+    }
+
+    .pagination span:hover {
+        opacity: 0.7;
+    }
+
+    .pagination span.inactive {
+        opacity: 0.5;
+    }
+
+
+}

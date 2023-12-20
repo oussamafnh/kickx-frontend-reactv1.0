@@ -1,9 +1,9 @@
 import React from 'react'
-import Carousel from './home/carousel'
-import Section2 from './home/section2'
-import Section3 from './home/sec3'
-import Section4 from './home/sec4'
-import Footer from './home/footer'
+import Carousel from './carousel'
+import Section2 from './section2'
+import Section3 from './sec3'
+import Section4 from './sec4'
+import Footer from './footer'
 
 const Home = () => {
     return (
