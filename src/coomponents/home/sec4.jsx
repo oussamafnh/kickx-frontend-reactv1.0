@@ -1,3 +1,4 @@
+
 // import React from 'react'
 
 // const Section4 = () => {
@@ -203,9 +204,6 @@
 
 
 
-
-
-
 import React, { useEffect, useState, useRef } from "react";
 import "../css/home-sec4.css";
 import { motion, AnimatePresence, useInView, useAnimation, useScroll, useTransform } from "framer-motion";
@@ -265,11 +263,8 @@ const Section4 = () => {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            // Change the selected store every 2 seconds
             setSelectedStoreIndex((prevIndex) => (prevIndex + 1) % stores.length);
         }, 5000);
-
-        // Clear the interval on component unmount
         return () => clearInterval(interval);
     }, [stores.length]);
 

@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from "react";
-import { motion, useInView, useAnimation } from "framer-motion";
+import React, { useEffect, useState, useRef } from "react";
+import { motion, useInView, useAnimation, } from "framer-motion";
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import '../css/footer.css';
